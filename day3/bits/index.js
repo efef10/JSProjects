@@ -18,7 +18,7 @@ function set(obj,option){
     return obj|optionMap[option];
 }
 
-var pita = Math.floor(Math.random()*4 + 1);
+var pita = Math.floor(Math.random()*15 + 1);
 var choice = choices[Math.floor(Math.random()*4)];
 
 console.log("search " + choice +" in: " + pita);
