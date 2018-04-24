@@ -23,5 +23,6 @@ var choice = choices[Math.floor(Math.random()*4)];
 
 console.log("search " + choice +" in: " + pita);
 console.log(is(pita,choice));
-if(!is(pita,choice))
-    console.log("after adding " + choice +": " + set(pita,choice));
+if(!is(pita,choice)) {
+    console.log("after adding " + choice + ": " + set(pita, choice));
+}
