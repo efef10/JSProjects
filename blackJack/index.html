@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlackJack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            color: white;
+        }
+
+        .split {
+            height: 90%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            top:55px;
+        }
+
+
+        .left {
+            left: 0;
+            background-color: #111;
+        }
+
+        .right {
+            right: 0;
+            background-color: red;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .centered img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        #message{
+            color:red;
+            width:50%;
+            margin:0 auto;
+        }
+        #round{
+            color:darkblue;
+            width:10%;
+            right:5%;
+            top:2%;
+            margin-top:0;
+            position: fixed;
+        }
+    </style>
+</head>
+<body onload = start()>
+
+    <button onclick = start() >New Game</button>
+    <button id = "btnAnother" onclick = initBoard() disabled>Another Round</button>
+
+    <p id = "message"></p>
+
+    <p id = "round">Round: 1</p>
+<div class="split left">
+    <div class="centered">
+        <p id = "score1">score: 0</p>
+        <h2>Player1</h2>
+        <button id = "draw1" class = "btnPlayer" onclick = draw()>Draw</button>
+        <button id = "stay1" class = "btnPlayer" onclick = stay()>Stay</button>
+        <div>
+            <div>
+                <label for="sum1">sum: </label><p style="display: inline "id = "sum1">0</p>
+            </div>
+        </div>
+
+
+    </div>
+    <ul id = "cards1">
+        <li class = "initialCards1" style = "list-style-type:none;"}>
+            <div style="float: left;">
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Playing_card_spade_A.svg/250px-Playing_card_spade_A.svg.png" alt="2013 Toyota Tacoma" id="itemImg">-->
+            </div>
+        </li>
+        <li class = "initialCards1" style = "list-style-type:none;"}>
+            <div style="float: left;">
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Playing_card_spade_A.svg/250px-Playing_card_spade_A.svg.png" alt="2013 Toyota Tacoma" id="itemImg">-->
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <p id = "score2">score: 0</p>
+        <h2>Player2</h2>
+        <button id = "draw2" class = "btnPlayer" disabled onclick = draw()>Draw</button>
+        <button id = "stay2" class = "btnPlayer" onclick = stay() disabled>Stay</button>
+
+        <div>
+            <div>
+                <label for="sum2">sum: </label><p style="display: inline "id = "sum2">0</p>
+            </div>
+        </div>
+    </div>
+    <ul id = "cards2">
+        <li class = "initialCards2" style = "list-style-type:none;"}>
+            <div style="float: left;">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Playing_card_spade_A.svg/250px-Playing_card_spade_A.svg.png" alt="2013 Toyota Tacoma" id="itemImg">-->
+            </div>
+        </li>
+        <li class = "initialCards2" style = "list-style-type:none;"}>
+            <div style="float: left;">
+                <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Playing_card_spade_A.svg/250px-Playing_card_spade_A.svg.png" alt="2013 Toyota Tacoma" id="itemImg">-->
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--<div>-->
+    <!--<p>Player2</p>-->
+    <!--<button>Draw</button>-->
+    <!--<button>Stay</button>-->
+<!--</div>-->
+
+
+
+</body>
+</html>
