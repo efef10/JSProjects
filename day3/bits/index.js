@@ -8,8 +8,7 @@ var optionMap = {
 var choices = ["humus","salat","hamutzim","chips"]
 
 function is(obj, option){
-    if ((obj & optionMap[option]) == optionMap[option])
-        {
+    if ((obj & optionMap[option]) == optionMap[option]){
             return true;
         }
         return false;
